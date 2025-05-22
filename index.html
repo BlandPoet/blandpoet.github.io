@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaines Snodderly | Portfolio</title>
+    <link rel="stylesheet" href="portfolio-site/styles/main.css" />
+   
+</head>
+<nav>
+
+</nav>
+
+
+<main>
+    <section id="menu">
+
+        <h2>Hi!
+            <span class="font-bold">I'm Bland Poet</span>
+        </h2>
+        <p>Artist | Creative Thinker | Technical Specialist</p>
+        <image src="/portfolio-site/assets/wizard.gif" alt="Wizard GIF" class="gif" />
+
+      <div class="button-container">
+        <button onclick="openWindow('projectsWindow')">Projects</button>
+        <button onclick="openWindow('contactWindow')">Contact</button>
+        <button onclick="openWindow('aboutWindow')">About Me</button>
+      </div>  
+    </section>
+      
+    <div id="projectsWindow" class="window" style="display: none;">
+        <div class="title-bar" onmousedown="startDrag(event, this)">
+          <span>Projects</span>
+          <button class="close-x" onclick="closeWindow('projectsWindow')">[ X ]</button>
+        </div>
+        <div class="window-content">
+          <p>Coming soon: automation scripts, dashboards, etc.</p>
+        </div>
+        <div class="resizer"></div>
+    </div>
+      
+    <div id="contactWindow" class="window" style="display: none;">
+        <div class="title-bar" onmousedown="startDrag(event, this)">
+          <span>Contact</span>
+          <button class="close-x" onclick="closeWindow('contactWindow')">[ X ]</button>
+        </div>
+        <div class="window-content">
+            <h2 class="contact-header">Get in touch!</h2>
+            <br>
+            <div class="contact-gif-container">
+                <image src="/portfolio-site/assets/email.gif" alt="email" class="contact-gif" />
+            </div>
+            <br>
+            <br>    
+            <p class="contact-body">the easiest way of reaching me is on my email as i dont check my socials often</p>
+            
+            
+            <div id="copy-feedback" style="display: none; position: absolute; background-color: #d4edda; color: #155724; padding: 5px 10px; border-radius: 5px; font-size: 14px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+                Copied to clipboard!
+            </div>
+            
+            <p class="contact-info">
+                email me at: 
+                <span data-tooltip-id="clipboard" data-tooltip-content="copy to clipboard">
+                    <a class="contact-cursor" onclick="copyToClipboard('blandpoetart@gmail.com', this)">blandpoetart@gmail.com</a>
+                </span>
+                or press the button below to copy my email address
+            </p>
+            <br>
+            <br>
+            <a href="mailto:blandpoetart@gmail.com">
+                <button class="contact-button">send me an email!</button>
+            </a>
+        </div>
+        <div class="resizer"></div>
+    </div>
+
+    <div id="aboutWindow" class="window" style="display: none;">
+        <div class="title-bar" onmousedown="startDrag(event, this)">
+            <span>About Me</span>
+            <button class="close-x" onclick="closeWindow('aboutWindow')">[ X ]</button>
+        </div>
+        <div class="window-content">
+            <p>peepeepoopoo</p>
+            <div class="resizer"></div>
+        </div>
+    </div>
+      
+
+<script src="portfolio-site/scripts/main.js"></script>
+</main>
+    <center>
+    <footer>
+        <p>&copy; 2025 Gaines Snodderly. All rights reserved. Powered by 1,000 Giants</p>
+    </footer>
+    </center>
+</html>
