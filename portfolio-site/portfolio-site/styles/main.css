@@ -1,0 +1,256 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        #e0e0e0,
+        #e0e0e0 10px,
+        #d0d0d0 10px,
+        #d0d0d0 20px
+    );
+    background-size: 200% 200%;
+    animation: pan 120s linear infinite;
+}
+
+@keyframes pan {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1.0);
+}
+
+h1 {
+    margin: 0;
+}
+
+p {
+    margin: 5px 0 0;
+}
+
+.font-bold {
+    color: rgb(123, 0, 255);
+}
+
+/* Window Styles */
+.window {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 300px;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 100%;
+    max-height: 100%;
+    border: 2px solid #444;
+    background: #ffffff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    resize: both;
+    overflow: auto;
+    z-index: 10;
+    color: rgb(0, 0, 0);
+}
+
+.title-bar {
+    background: #333;
+    padding: 0.5rem;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    border-bottom: 1px solid #555;
+}
+
+.title-bar span {
+    color: white;
+    font-weight: bold;
+}
+
+.title-bar button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+}
+
+.window-content {
+    overflow: auto;
+    padding: 10px;
+}
+
+.resizer {
+    width: 12px;
+    height: 12px;
+    background: #88888800;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+    border-bottom-right-radius: 5px;
+}
+
+/* Menu Styles */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    height: 400px;
+    margin: 100px auto;
+}
+
+#menu h2 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center;
+}
+
+#menu p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Button Styles */
+
+#menu button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+#menu button:hover {
+    background-color: #d0d0d0;
+    transform: scale(1.1)
+}
+
+.close-x {
+    padding: 10px 20px;
+}
+
+.close-x:hover {
+    transform: scale(1.3)
+}
+
+
+/* Content Container Styles */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.content-container h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.content-container .gif {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Contact Window */
+
+.contact-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-gif-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-gif {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+.contact-info {
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+}
+
+.contact-cursor {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.contact-cursor:hover {
+    color: #0056b3;
+}
+
+.contact-button {
+    display: block; /* Change to block for centering with margin */
+    margin: 0 auto; /* Centers the button horizontally */
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
