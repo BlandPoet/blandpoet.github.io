@@ -11,7 +11,7 @@ body {
         #d0d0d0 20px
     );
     background-size: 200% 200%;
-    animation: pan 120s linear infinite;
+    animation: pan 200s linear infinite;
 }
 
 @keyframes pan {
@@ -254,3 +254,25 @@ p {
     background-color: #0056b3;
     transform: scale(1.1);
 }
+
+
+
+#giant-gif {
+    position: fixed;
+    top: 50%; 
+    left: -200px; 
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 150px;
+    pointer-events: none; 
+    animation: move-across 6s linear forwards;
+  }
+  
+  @keyframes move-across {
+    from {
+      left: -200px; 
+    }
+    to {
+      left: 100vw; 
+    }
+  }
