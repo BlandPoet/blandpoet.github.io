@@ -119,7 +119,6 @@ document.querySelectorAll('.window').forEach((windowEl) => {
   });
 });
 
-
 function copyToClipboard(text, element) {
   navigator.clipboard.writeText(text).then(() => {
       // Show feedback message
@@ -144,3 +143,19 @@ function copyToClipboard(text, element) {
       console.error('Failed to copy text: ', err);
   });
 }
+
+
+document.getElementById('giants-trigger').addEventListener('click', () => {
+  // Create the GIF element
+  const gif = document.createElement('img');
+  gif.src = 'assets/frostGiant.gif'; 
+  gif.id = 'giant-gif';
+
+  // Append the GIF to the body
+  document.body.appendChild(gif);
+
+  // Remove the GIF after the animation ends
+  gif.addEventListener('animationend', () => {
+    gif.remove();
+  });
+});
